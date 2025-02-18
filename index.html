@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Age fredy</title>
+  <title>age duncan</title>
   <link rel="stylesheet" href="./style.css">
 
 </head>
@@ -14,20 +14,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Age Calculator</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
     <div class="container">
         <h1>Age Calculator</h1>
         <form id="ageForm">
             <label for="dob">Enter your Date of Birth:</label><br>
-            <input type="date" id="dob" required><br>
+            <input type="date" id="dob" required><br><br>
+
+           
+
+            
             <button type="button" onclick="calculateAge()">Calculate Age</button>
+            <!-- Cancel Button -->
+            <button type="button" onclick="cancelDate()">Cancel</button>
         </form>
+
+        <!-- Result Display -->
         <div class="result" id="ageResult"></div>
     </div>
 
-    <script src="script.js"></script> <!-- Link to external JS file -->
+    <script src="script.js"></script> 
 </body>
 </html>
 <!-- partial -->

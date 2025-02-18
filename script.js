@@ -1,27 +1,42 @@
+// Function to calculate age based on the entered date of birth
 function calculateAge() {
-    const dob = new Date(document.getElementById('dob').value);
-    const today = new Date();
+    const dob = new Date(document.getElementById('dob').value); // Get the entered date
+    const today = new Date(); // Get today's date
 
-    // Check if the date entered is valid
+    // Check if the entered date is valid
     if (isNaN(dob)) {
         alert('Please enter a valid date.');
         return;
     }
 
-    // Check if the DOB is in the future
+    // Ensure the date is not in the future
     if (dob > today) {
         alert('Date of birth cannot be in the future.');
         return;
     }
 
+    // Calculate age
     let age = today.getFullYear() - dob.getFullYear();
     const monthDifference = today.getMonth() - dob.getMonth();
     const dayDifference = today.getDate() - dob.getDate();
 
-    // Adjust the age if the birthday hasn't occurred yet this year
+    // Adjust age if the birthday hasn't occurred yet this year
     if (monthDifference < 0 || (monthDifference === 0 && dayDifference < 0)) {
         age--;
     }
 
+    // Display the calculated age
     document.getElementById('ageResult').innerText = `You are ${age} years old.`;
+}
+
+// Function to clear the input field and the result
+function clearDate() {
+    document.getElementById('dob').value = ''; // Clear the date input
+    document.getElementById('ageResult').innerText = ''; // Clear the result
+}
+
+// Function to cancel/reset the input and the result
+function cancelDate() {
+    document.getElementById('dob').value = ''; // Clear the date input
+    document.getElementById('ageResult').innerText = ''; // Clear the result
 }
