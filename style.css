@@ -1,0 +1,95 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #6a82fb, #fc5c7d); /* A cool blue to pink gradient */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Container */
+.container {
+    background: rgba(255, 255, 255, 0.9); /* Light translucent background */
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 40px 50px;
+    width: 350px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-10px); /* Slight lift effect when hovering over the container */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Header */
+h1 {
+    font-size: 2rem;
+    color: #6a82fb; /* Blue for the header */
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Label */
+label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+    display: block;
+}
+
+/* Date Input */
+input[type="date"] {
+    padding: 12px 18px;
+    margin: 15px 0;
+    width: 100%;
+    border: 2px solid #6a82fb; /* Blue border */
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #f8f8f8;
+    transition: border-color 0.3s ease;
+}
+
+input[type="date"]:focus {
+    border-color: #fc5c7d; /* Change to a pinkish color when focused */
+    outline: none;
+}
+
+/* Button */
+button {
+    padding: 14px 25px;
+    background-color: #6a82fb; /* Blue button */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #fc5c7d; /* Pink color on hover */
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Result */
+.result {
+    margin-top: 20px;
+    font-size: 1.5rem;
